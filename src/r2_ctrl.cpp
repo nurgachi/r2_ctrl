@@ -39,12 +39,6 @@ private:
         out.cmds.push_back(cmd);
 
         pub_motor_->publish(out);
-
-        RCLCPP_INFO(
-            this->get_logger(),
-            "m1=%.1f  m2=%.1f  m3=%.1f",
-            out.cmds[0].value
-        );
     }
 
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_joy_;
