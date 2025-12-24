@@ -1,0 +1,116 @@
+[0.000000] (-) TimerEvent: {}
+[0.000732] (r2_ctrl) JobQueued: {'identifier': 'r2_ctrl', 'dependencies': OrderedDict()}
+[0.000781] (r2_ctrl) JobStarted: {'identifier': 'r2_ctrl'}
+[0.016310] (r2_ctrl) JobProgress: {'identifier': 'r2_ctrl', 'progress': 'cmake'}
+[0.017274] (r2_ctrl) Command: {'cmd': ['/usr/bin/cmake', '/home/michiakisugawara/ros_ws/src/r2_ctrl', '-DCMAKE_INSTALL_PREFIX=/home/michiakisugawara/ros_ws/src/r2_ctrl/install/r2_ctrl'], 'cwd': '/home/michiakisugawara/ros_ws/src/r2_ctrl/build/r2_ctrl', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'michiakisugawara', 'GIT_ASKPASS': '/home/michiakisugawara/.vscode-server/bin/994fd12f8d3a5aa16f17d42c041e5809167e845a/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/michiakisugawara', 'TERM_PROGRAM_VERSION': '1.107.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-1de798a1-56c3-405c-adaa-95bd6900e92d.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/michiakisugawara/.vscode-server/bin/994fd12f8d3a5aa16f17d42c041e5809167e845a/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/michiakisugawara/.vscode-server/bin/994fd12f8d3a5aa16f17d42c041e5809167e845a/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'michiakisugawara', 'NAME': 'MSugawara', 'WSL_INTEROP': '/run/WSL/549_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/home/michiakisugawara/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/michiakisugawara/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/michiakisugawara/.vscode-server/bin/994fd12f8d3a5aa16f17d42c041e5809167e845a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Symantec/VIP Access Client/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Users/X8RWL/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/X8RWL/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/X8RWL/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/X8RWL/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/X8RWL/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/X8RWL/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/X8RWL/AppData/Local/Microsoft/WindowsApps:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-5453ac8088.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/michiakisugawara/ros_ws/src/r2_ctrl/build/r2_ctrl', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[0.099776] (-) TimerEvent: {}
+[0.200090] (-) TimerEvent: {}
+[0.300389] (-) TimerEvent: {}
+[0.377453] (r2_ctrl) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.400499] (-) TimerEvent: {}
+[0.500761] (-) TimerEvent: {}
+[0.601224] (-) TimerEvent: {}
+[0.701639] (-) TimerEvent: {}
+[0.801984] (-) TimerEvent: {}
+[0.902337] (-) TimerEvent: {}
+[1.002679] (-) TimerEvent: {}
+[1.103020] (-) TimerEvent: {}
+[1.203479] (-) TimerEvent: {}
+[1.303807] (-) TimerEvent: {}
+[1.404365] (-) TimerEvent: {}
+[1.409269] (r2_ctrl) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.504533] (-) TimerEvent: {}
+[1.604916] (-) TimerEvent: {}
+[1.705425] (-) TimerEvent: {}
+[1.805785] (-) TimerEvent: {}
+[1.906300] (-) TimerEvent: {}
+[2.006690] (-) TimerEvent: {}
+[2.107005] (-) TimerEvent: {}
+[2.207269] (-) TimerEvent: {}
+[2.307632] (-) TimerEvent: {}
+[2.316742] (r2_ctrl) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.407824] (-) TimerEvent: {}
+[2.508099] (-) TimerEvent: {}
+[2.608425] (-) TimerEvent: {}
+[2.654720] (r2_ctrl) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.661480] (r2_ctrl) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.663315] (r2_ctrl) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.664247] (r2_ctrl) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.708617] (-) TimerEvent: {}
+[2.801116] (r2_ctrl) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.808830] (-) TimerEvent: {}
+[2.909223] (-) TimerEvent: {}
+[3.009729] (-) TimerEvent: {}
+[3.110085] (-) TimerEvent: {}
+[3.120526] (r2_ctrl) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.126780] (r2_ctrl) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.127114] (r2_ctrl) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.127485] (r2_ctrl) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.135250] (r2_ctrl) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[3.210455] (-) TimerEvent: {}
+[3.310742] (r2_ctrl) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.310916] (-) TimerEvent: {}
+[3.411272] (-) TimerEvent: {}
+[3.414792] (r2_ctrl) StdoutLine: {'line': b'-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[3.511415] (-) TimerEvent: {}
+[3.611792] (-) TimerEvent: {}
+[3.710155] (r2_ctrl) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[3.711919] (-) TimerEvent: {}
+[3.726462] (r2_ctrl) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[3.748525] (r2_ctrl) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.772737] (r2_ctrl) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.812128] (-) TimerEvent: {}
+[3.895884] (r2_ctrl) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[3.900429] (r2_ctrl) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.912212] (-) TimerEvent: {}
+[3.985322] (r2_ctrl) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[4.012318] (-) TimerEvent: {}
+[4.112589] (-) TimerEvent: {}
+[4.213008] (-) TimerEvent: {}
+[4.272747] (r2_ctrl) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[4.313257] (-) TimerEvent: {}
+[4.412956] (r2_ctrl) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.413307] (-) TimerEvent: {}
+[4.513563] (-) TimerEvent: {}
+[4.613900] (-) TimerEvent: {}
+[4.693578] (r2_ctrl) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[4.714079] (-) TimerEvent: {}
+[4.814599] (-) TimerEvent: {}
+[4.915123] (-) TimerEvent: {}
+[5.015415] (-) TimerEvent: {}
+[5.115688] (-) TimerEvent: {}
+[5.216016] (-) TimerEvent: {}
+[5.316393] (-) TimerEvent: {}
+[5.416677] (-) TimerEvent: {}
+[5.517001] (-) TimerEvent: {}
+[5.617304] (-) TimerEvent: {}
+[5.717663] (-) TimerEvent: {}
+[5.817960] (-) TimerEvent: {}
+[5.918389] (-) TimerEvent: {}
+[6.018677] (-) TimerEvent: {}
+[6.119106] (-) TimerEvent: {}
+[6.220487] (-) TimerEvent: {}
+[6.320904] (-) TimerEvent: {}
+[6.421291] (-) TimerEvent: {}
+[6.521693] (-) TimerEvent: {}
+[6.572539] (r2_ctrl) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:15 (find_package):\n'}
+[6.572874] (r2_ctrl) StderrLine: {'line': b'  By not providing "Findrobomas_package_2.cmake" in CMAKE_MODULE_PATH this\n'}
+[6.572930] (r2_ctrl) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[6.572976] (r2_ctrl) StderrLine: {'line': b'  "robomas_package_2", but CMake did not find one.\n'}
+[6.573013] (r2_ctrl) StderrLine: {'line': b'\n'}
+[6.573053] (r2_ctrl) StderrLine: {'line': b'  Could not find a package configuration file provided by "robomas_package_2"\n'}
+[6.573087] (r2_ctrl) StderrLine: {'line': b'  with any of the following names:\n'}
+[6.573121] (r2_ctrl) StderrLine: {'line': b'\n'}
+[6.573163] (r2_ctrl) StderrLine: {'line': b'    robomas_package_2Config.cmake\n'}
+[6.573194] (r2_ctrl) StderrLine: {'line': b'    robomas_package_2-config.cmake\n'}
+[6.573225] (r2_ctrl) StderrLine: {'line': b'\n'}
+[6.573264] (r2_ctrl) StderrLine: {'line': b'  Add the installation prefix of "robomas_package_2" to CMAKE_PREFIX_PATH or\n'}
+[6.573304] (r2_ctrl) StderrLine: {'line': b'  set "robomas_package_2_DIR" to a directory containing one of the above\n'}
+[6.573343] (r2_ctrl) StderrLine: {'line': b'  files.  If "robomas_package_2" provides a separate development package or\n'}
+[6.573381] (r2_ctrl) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[6.573419] (r2_ctrl) StderrLine: {'line': b'\n'}
+[6.573458] (r2_ctrl) StderrLine: {'line': b'\x1b[0m\n'}
+[6.573497] (r2_ctrl) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[6.581470] (r2_ctrl) CommandEnded: {'returncode': 1}
+[6.609376] (r2_ctrl) JobEnded: {'identifier': 'r2_ctrl', 'rc': 1}
+[6.619791] (-) EventReactorShutdown: {}

@@ -57,12 +57,12 @@ private:
 
         robomas_package_2::msg::MotorCmd cmd;
 
-        float x = msg->axes[3] * parallel_velocity;
-        float y = msg->axes[4] * parallel_velocity;
-
         //ベースの4輪
         if(std::abs(msg->axes[2])<0.1 && std::abs(msg->buttons[5])<0.1){
             //平行移動
+
+            float x = msg->axes[3] * parallel_velocity;
+            float y = msg->axes[4] * parallel_velocity;
 
             cmd.id = LF;
             cmd.mode = 1;
