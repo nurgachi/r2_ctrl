@@ -35,7 +35,7 @@ private:
         // --- motor1: 右スティックX（axes[3]） ---
         cmd.id = 1;
         cmd.mode = 2;  // SPEED mode
-        cmd.value = msg->axes[3] * 1000.0f;
+        cmd.value = msg->axes[3] * 10.0f;
         out.cmds.push_back(cmd);
 
         pub_motor_->publish(out);
