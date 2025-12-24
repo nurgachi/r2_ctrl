@@ -4,6 +4,31 @@
 #include "robomas_package_2/msg/motor_cmd.hpp"
 #include "robomas_package_2/msg/ems.hpp"
 
+constexpr double parallel_velocity = 0.1;
+constexpr double rotation_velocity = 0.1;
+constexpr double rotation_leg_rotation_velocity = 0.1;
+constexpr double rotation_leg_linear_velocity = 0.1;
+constexpr double linear_leg_linear_velocity = 0.1;
+
+int LF = 1;
+int RF = 2;
+int LR = 3;
+int RR = 4;
+
+int RLF = 5;
+int RRF = 6;
+int RLR = 7;
+int RRR = 8;
+
+int LLF = 9;
+int LRF = 10;
+
+int LL = 11;
+
+double linear_leg_location = 0;
+
+double sin45 = sqrt(2) / 2;
+
 class R2Ctrl : public rclcpp::Node
 {
 public:
@@ -32,13 +57,104 @@ private:
 
         robomas_package_2::msg::MotorCmd cmd;
 
-        // --- motor1: 右スティックX（axes[3]） ---
-        cmd.id = 1;
-        cmd.mode = 2;  // SPEED mode
-        cmd.value = msg->axes[3] * 10.0f;
+        float x = msg->axes[3] * parallel_velocity;
+        float y = msg->axes[4] * parallel_velocity;
+
+        //ベースの4輪
+        if(std::abs(msg->axes[2])<0.1 && std::abs(msg->buttons[5])<0.1){
+            //平行移動
+
+            cmd.id = LF;
+            cmd.mode = 1;
+            cmd.value = x * 1 + y * 1;
+            out.cmds.push_back(cmd);
+
+            cmd.id = RR;
+            cmd.mode = 1;
+            cmd.value = x * -1 + y * -1;
+            out.cmds.push_back(cmd);
+
+            cmd.id = RF;
+            cmd.mode = 1;
+            cmd.value = x * 1 + y * -1;
+            out.cmds.push_back(cmd);
+
+            cmd.id = LR;
+            cmd.mode = 1;
+            cmd.value = x * -1 + y * 1;
+            out.cmds.push_back(cmd);
+        } else {
+            //回転移動
+            double rotation_direction = rotation_velocity * (msg->axes[2] - msg->axes[5]);
+
+            cmd.id = LF;
+            cmd.mode = 1;
+            cmd.value = rotation_direction;
+            out.cmds.push_back(cmd);
+
+            cmd.id = RR;
+            cmd.mode = 1;
+            cmd.value = rotation_direction;
+            out.cmds.push_back(cmd);
+
+            cmd.id = RF;
+            cmd.mode = 1;
+            cmd.value = rotation_direction;
+            out.cmds.push_back(cmd);
+
+            cmd.id = LR;
+            cmd.mode = 1;
+            cmd.value = rotation_direction;
+            out.cmds.push_back(cmd);
+        }
+
+        //前方の回転足の回転
+        double forward_rotation_leg_rotation_direction = rotation_leg_rotation_velocity * (msg->buttons[1] - msg->buttons[0]);
+
+        cmd.id = RLF;
+        cmd.mode = 1;
+        cmd.value = rotation_leg_rotation_direction;
         out.cmds.push_back(cmd);
 
-        pub_motor_->publish(out);
+        cmd.id = RRF;
+        cmd.mode = 1;
+        cmd.value = rotation_leg_rotation_direction * -1;
+        out.cmds.push_back(cmd);
+
+        //後方の回転足の回転
+        double reverse_rotation_leg_rotation_direction = rotation_leg_rotation_velocity * (msg->buttons[3] - msg->buttons[2]);
+
+        cmd.id = RLR;
+        cmd.mode = 1;
+        cmd.value = rotation_leg_rotation_direction;
+        out.cmds.push_back(cmd);
+
+        cmd.id = RRR;
+        cmd.mode = 1;
+        cmd.value = rotation_leg_rotation_direction * -1;
+        out.cmds.push_back(cmd);
+
+        //回転足の直進
+        double rotation_leg_linear_direction = rotation_leg_linear_velocity * (msg->buttons[5] - msg->buttons[4]);
+
+        cmd.id = LLF;
+        cmd.mode = 1;
+        cmd.value = rotation_leg_linear_direction;
+        out.cmds.push_back(cmd);
+
+        cmd.id = LRF;
+        cmd.mode = 1;
+        cmd.value = rotation_leg_linear_direction * -1;
+        out.cmds.push_back(cmd);
+
+        //直動足
+        linear_leg_location += (msg->buttons[9] - msg->buttons[8]) * linear_leg_linear_velocity;
+        if(linear_leg_location < 0) linear_leg_location = 0;
+
+        cmd.id = LL;
+        cmd.mode = 2;
+        cmd.value = linear_leg_location;
+        out.cmds.push_back(cmd);
     }
 
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_joy_;
