@@ -1,26 +1,34 @@
 cmake_minimum_required(VERSION 3.8)
 project(r2_ctrl)
 
+# ---- コンパイラ警告 ----
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
+# ---- 必須パッケージ ----
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
-  set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
-  set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+# 自作 msg を使っているので必須
+find_package(robomas_package_2 REQUIRED)
 
+# ---- 実行ファイル ----
+add_executable(r2_ctrl_node src/r2_ctrl.cpp)
+
+# ---- 依存関係 ----
+ament_target_dependencies(r2_ctrl_node
+  rclcpp
+  sensor_msgs
+  robomas_package_2
+)
+
+# ---- インストール ----
+install(TARGETS
+  r2_ctrl_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# ---- ament ----
 ament_package()
