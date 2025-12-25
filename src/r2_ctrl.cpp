@@ -113,12 +113,12 @@ private:
 
         cmd.id = RLF;
         cmd.mode = 1;
-        cmd.value = rotation_leg_rotation_direction;
+        cmd.value = forward_rotation_leg_rotation_direction;
         out.cmds.push_back(cmd);
 
         cmd.id = RRF;
         cmd.mode = 1;
-        cmd.value = rotation_leg_rotation_direction * -1;
+        cmd.value = forward_rotation_leg_rotation_direction * -1;
         out.cmds.push_back(cmd);
 
         //後方の回転足の回転
@@ -126,12 +126,12 @@ private:
 
         cmd.id = RLR;
         cmd.mode = 1;
-        cmd.value = rotation_leg_rotation_direction;
+        cmd.value = reverse_rotation_leg_rotation_direction;
         out.cmds.push_back(cmd);
 
         cmd.id = RRR;
         cmd.mode = 1;
-        cmd.value = rotation_leg_rotation_direction * -1;
+        cmd.value = reverse_rotation_leg_rotation_direction * -1;
         out.cmds.push_back(cmd);
 
         //回転足の直進

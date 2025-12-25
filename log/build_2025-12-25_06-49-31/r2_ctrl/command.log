@@ -1,2 +1,0 @@
-Invoking command in '/home/michiakisugawara/ros_ws/src/r2_ctrl/build/r2_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/michiakisugawara/ros_ws/src/r2_ctrl -DCMAKE_INSTALL_PREFIX=/home/michiakisugawara/ros_ws/src/r2_ctrl/install/r2_ctrl
-Invoked command in '/home/michiakisugawara/ros_ws/src/r2_ctrl/build/r2_ctrl' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/michiakisugawara/ros_ws/src/r2_ctrl -DCMAKE_INSTALL_PREFIX=/home/michiakisugawara/ros_ws/src/r2_ctrl/install/r2_ctrl
