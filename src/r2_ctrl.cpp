@@ -6,9 +6,9 @@
 
 constexpr double parallel_velocity = 0.1;
 constexpr double rotation_velocity = 0.1;
-constexpr double rotation_leg_rotation_velocity = 0.1;
-constexpr double rotation_leg_linear_velocity = 0.1;
-constexpr double linear_leg_linear_velocity = 0.1;
+constexpr double rotation_leg_rotation_velocity = 1;
+constexpr double rotation_leg_linear_velocity = 1;
+constexpr double linear_leg_linear_velocity = 1;
 
 int LF = 1;
 int RF = 2;
@@ -155,6 +155,8 @@ private:
         cmd.mode = 2;
         cmd.value = linear_leg_location;
         out.cmds.push_back(cmd);
+
+        pub_motor_->publish(out);
     }
 
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_joy_;
